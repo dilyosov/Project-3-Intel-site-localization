@@ -93,7 +93,7 @@ body {
 /* Individual milestone card styles */
 .milestone-card {
   position: relative;
-  background: #2ac4eb;
+  background: #0077be; /* darker blue for better contrast */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   flex: 0 0 320px;      /* Fixed width for each card */
@@ -162,20 +162,21 @@ body {
 .milestone-year {
   font-weight: bold;
   font-size: 1.3rem;
-  color: #0077be;
+  color: #fff; /* white text for better contrast */
 }
 .milestone-title {
   font-weight: bold;
   font-size: 1.05rem;
-  color: #222;
+  color: #fff; /* white text for better contrast */
 }
 
-/* Tip text for scrolling */
+/* Tip text for scrolling - improved contrast for accessibility */
 .milestone-scroll-tip {
   text-align: center;
   font-size: 1rem;
-  color: #0077be;
+  color: #00395d; /* darker blue for better contrast */
   margin-top: 8px;
+  font-weight: bold;
 }
 
 /* Responsive design for mobile screens */
@@ -310,4 +311,16 @@ body {
     max-width: 98vw;
     width: 100%;
   }
+}
+
+/* Footer contrast improvement */
+footer {
+  background: #222 !important; /* dark background for footer */
+}
+footer a {
+  color: #fff !important;      /* white links for contrast */
+  text-decoration: underline;
+}
+footer small {
+  color: #fff !important;
 }

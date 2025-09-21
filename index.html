@@ -4,11 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link rel="icon" type="image/png" href="img/image copy 2.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation Bar at the top -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2">
+    <div class="container">
+      <!-- Brand/logo: larger, with white background and rounded corners for visibility -->
+      <a class="navbar-brand" href="#">
+        <img src="img/intel-header-logo.svg" alt="Intel Logo"
+             style="height:48px; background:rgb(10, 140, 192); padding:6px; border-radius:8px; vertical-align:middle; box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        Intel Sustainability
+      </a>
+      <!-- Hamburger menu button for mobile screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navigation links: use anchor links to scroll to sections -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Use text-white for nav-link for better contrast -->
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#timeline">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#carousel">Sustainability</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#newsletter">Newsletter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#footer">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <header>
+  <header id="hero">
     <div class="header-content">
       <!-- Intel logo at the top -->
       <img src="img/intel-header-logo.svg" alt="Intel Logo" class="intel-logo" />
@@ -25,14 +68,14 @@
   </header>
 
   <!-- Milestone Timeline Section -->
-  <section class="milestone-section">
+  <section class="milestone-section" id="timeline">
     <!-- Flexbox container for milestone cards -->
     <div class="milestone-cards">
       <!-- Card 1 -->
-      <div class="milestone-card">
+      <div class="milestone-card" style="background:#0077be;">
         <div class="milestone-card-front">
-          <h2><span class="milestone-year">1968</span></h2>
-          <h3><span class="milestone-title">Intel Founded</span></h3>
+          <h2><span class="milestone-year" style="color:#fff;">1968</span></h2>
+          <h3><span class="milestone-title" style="color:#fff;">Intel Founded</span></h3>
           <img src="img/1968.png" alt="Intel Founded 1968" class="milestone-img" />
         </div>
         <div class="milestone-card-back">
@@ -144,8 +187,356 @@
         </div>
       </div>
     </div>
-    <p class="milestone-scroll-tip">Scroll sideways to see more milestones!</p>
-  </section>                                                                                                                                                                                                                                                                                                                                                                                                              
+    <p class="milestone-scroll-tip" style="color:#00395d; font-weight:bold;">Scroll sideways to see more milestones!</p>
+  </section>
+  <!-- Carousel Section for Sustainability Columns -->
+  <section id="carousel">
+    <!-- Bootstrap Carousel for the three columns -->
+    <div id="sustainabilityCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-column align-items-center p-4">
+            <!-- Restored icon and heading for slide 1 -->
+            <div style="font-size:2.5rem;" aria-hidden="true">🌱</div>
+            <h2>RISE Strategy</h2>
+            <p style="width: 50%">
+              Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+              Intel sets ambitious 2030 goals, including driving industry-wide 
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-column align-items-center p-4">
+            <div style="font-size:2.5rem;" aria-hidden="true">🌎</div>
+            <h2>Commitment</h2>
+            <p style="width: 50%">
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+              (Scope 1 and 2) by 2040. This commitment builds on decades of 
+              environmental initiatives and partnerships across the semiconductor 
+              industry.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-column align-items-center p-4">
+            <div style="font-size:2.5rem;" aria-hidden="true">💧</div>
+            <h2>Water &amp; Waste</h2>
+            <p style="width: 50%">
+              Intel conserves billions of gallons of water annually and 
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and 
+              advance a circular economy.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel controls: use Bootstrap buttons and larger icons for visibility -->
+      <button class="carousel-control-prev btn btn-primary" type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide="prev" style="width:48px;height:48px;top:50%;transform:translateY(-50%);left:10px;opacity:1;">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter:none;width:32px;height:32px;background-color:white;border-radius:50%;border:2px solid #0077be;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next btn btn-primary" type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide="next" style="width:48px;height:48px;top:50%;transform:translateY(-50%);right:10px;opacity:1;">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="filter:none;width:32px;height:32px;background-color:white;border-radius:50%;border:2px solid #0077be;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!-- Subscription Form Section -->
+  <section id="newsletter">
+    <!-- Heading for the form (centered for beginners) -->
+    <h2 class="text-center">Subscribe to Intel’s Sustainability Newsletter</h2>
+    <!-- Bootstrap form for email subscription -->
+    <form id="newsletterForm" action="#" method="post" class="container" style="max-width:400px;">
+      <!-- Email input field -->
+      <div class="mb-3">
+        <label for="newsletter-email" class="form-label"></label>
+        <input type="email" id="newsletter-email" name="email" class="form-control" required placeholder="Enter your email" aria-label="Email address">
+      </div>
+      <!-- Subscribe button -->
+      <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Modal for Subscription Success -->
+  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscribeModalLabel">Thank You!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          You have successfully subscribed to Intel’s Sustainability Newsletter.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Accordion Section -->
+  <section class="container my-5" id="faq">
+    <h3 class="text-center mb-4">Frequently Asked Questions</h3>
+    <div class="accordion" id="faqAccordion">
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            What is Intel’s RISE strategy?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            RISE stands for Responsible, Inclusive, Sustainable, Enabling. It’s Intel’s approach to drive positive change for the environment and society.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            What are Intel’s 2030 sustainability goals?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Intel aims to achieve net-positive water use, zero waste to landfill, and significant reductions in greenhouse gas emissions by 2030.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            How does Intel conserve water?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Intel uses advanced water management and partners with communities to restore local watersheds.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            What is Intel’s commitment to renewable energy?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Intel uses renewable electricity for its global operations and invests in clean energy projects.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            How does Intel reduce waste?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Intel upcycles and recycles materials, aiming for zero waste to landfill and a circular economy.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+            What is net-zero greenhouse gas emissions?
+          </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Net-zero means balancing emitted greenhouse gases with those removed from the atmosphere, aiming for no net increase.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+            How can I learn more about Intel’s sustainability efforts?
+          </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Visit Intel’s official website or subscribe to the sustainability newsletter for updates.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+            What is a circular economy?
+          </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            A circular economy keeps products and materials in use, reducing waste and environmental impact.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 9 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+            How does Intel support local communities?
+          </button>
+        </h2>
+        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Intel partners with local organizations to restore watersheds and promote environmental stewardship.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 10 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+            How do I contact Intel about sustainability?
+          </button>
+        </h2>
+        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Use the contact link in the footer or visit Intel’s website for more information.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer" style="background:#222; padding:16px 0; margin-top:32px;">
+    <!-- Footer container for content -->
+    <div style="max-width:900px; margin:0 auto; text-align:center;">
+      <!-- Navigation links (placeholders) -->
+      <nav style="margin-bottom:8px;">
+        <a href="#" style="margin:0 12px; color:#fff; text-decoration:underline;">Privacy Policy</a>
+        <a href="#" style="margin:0 12px; color:#fff; text-decoration:underline;">Terms of Use</a>
+        <a href="#" style="margin:0 12px; color:#fff; text-decoration:underline;">Contact</a>
+      </nav>
+      <!-- Copyright notice -->
+      <small style="color:#fff;">&copy; 2025 Intel Corporation. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- Script to set RTL or LTR mode for all sections and milestone card descriptions -->
+  <script>
+    // List of RTL languages
+    var rtlLanguages = ['ar', 'he', 'fa'];
+
+    // Function to update direction and alignment for all main sections except milestone cards
+    function updateDirection() {
+      var lang = document.documentElement.lang;
+      document.body.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
+
+      var sections = document.querySelectorAll('body > section:not(.milestone-section)');
+      var header = document.querySelector('body > header');
+
+      // Set alignment for header
+      if (header) {
+        if (rtlLanguages.includes(lang)) {
+          header.classList.remove('text-center', 'text-start');
+          header.classList.add('text-end');
+        } else {
+          header.classList.remove('text-center', 'text-end');
+          header.classList.add('text-start');
+        }
+      }
+
+      // Set alignment for each section
+      sections.forEach(function(section) {
+        if (rtlLanguages.includes(lang)) {
+          section.classList.remove('text-center', 'text-start');
+          section.classList.add('text-end');
+        } else {
+          section.classList.remove('text-center', 'text-end');
+          section.classList.add('text-start');
+        }
+      });
+
+      // For the three-column section, also update the columns
+      var columns = document.querySelectorAll('.container .row .col-md-4');
+      columns.forEach(function(col) {
+        if (rtlLanguages.includes(lang)) {
+          col.classList.remove('text-center', 'text-start');
+          col.classList.add('text-end');
+        } else {
+          col.classList.remove('text-center', 'text-end');
+          col.classList.add('text-start');
+        }
+      });
+
+      // Set alignment for milestone card descriptions
+      var cardBacks = document.querySelectorAll('.milestone-card-back');
+      cardBacks.forEach(function(card) {
+        // For RTL, align text to right; for LTR, align to left
+        card.style.textAlign = rtlLanguages.includes(lang) ? 'right' : 'left';
+      });
+    }
+
+    // Run on initial load
+    updateDirection();
+
+    // Watch for changes to the <html> lang attribute
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+          updateDirection();
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    // Students: If you change <html lang="..."> using JavaScript,
+    // the page direction and alignment will update automatically for all sections and card descriptions!
+  </script>
+  <!-- Show modal when form is submitted -->
+  <script>
+    // Get the form and modal
+    var newsletterForm = document.getElementById('newsletterForm');
+    var subscribeModal = new bootstrap.Modal(document.getElementById('subscribeModal'));
+
+    // When the form is submitted, prevent default and show modal
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent page reload
+        subscribeModal.show();  // Show the Bootstrap modal
+        newsletterForm.reset(); // Optionally reset the form
+      });
+    }
+  </script>
+  <!-- Enable smooth scrolling for anchor links (beginner-friendly) -->
+  <script>
+    document.querySelectorAll('a.nav-link').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          var target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 
